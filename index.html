@@ -7,79 +7,93 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
 body {
-        padding-top: 70px;
-        margin: 0;
-        padding: 0;
-      }
+    padding-top: 80px; /* Adjust the padding to create space for the fixed navbar */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
 
-      .navbar {
-        background-color: rgb(1, 174, 255);
-        border-radius: 0px;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.229);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
+/* Navbar styles */
+.navbar {
+  background-color: #01aeff;
+  border-radius: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.229);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-      .navbar-brand {
-        color: aliceblue;
-        font-weight: 800;
-      }
+.navbar-brand {
+  color: #fff;
+  font-weight: 800;
+}
 
-      .button-topup {
-        margin-top: 100px;
-        height: 200px;
-        width: 100%;
-        position: relative;
-        margin: auto;
-        border-radius: 0 0 50px 50px;
-        box-shadow: 3px 2px 5px 1px #00000049;
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        text-align: left;
-      }
+/* Modified styles for "Hai" and "Poin" */
+.navbar-brand p {
+  font-size: 10px; /* Adjust the font size as needed */
+  font-weight: normal; /* Make it not bold */
+  margin: 0; /* Remove margin for a cleaner look */
+}
+.navbar-brand img {
+            height: 50px; /* Adjust the height as needed */
+            margin-right: 10px; /* Add margin to separate the image and text */
+        }
+/* Button styles */
+.button-topup {
+  margin-top: 100px;
+  height: 200px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 3px 2px 5px 1px #00000049;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+}
 
-      .button-topup::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('https://cdn.pixabay.com/photo/2020/05/15/05/11/landscape-5172224_960_720.png') center/cover;
-        filter: blur(3px);
-        border-radius: 0 0 50px 50px;
-        z-index: -1;
-      }
+.button-topup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn.pixabay.com/photo/2020/05/15/05/11/landscape-5172224_960_720.png') center/cover;
+  filter: blur(3px);
+  border-radius: 0 0 50px 50px;
+  z-index: -1;
+}
 
-      .button-topup p {
-        margin: 0;
-        font-weight: 600;
-        color: aliceblue;
-        position: relative;
-        z-index: 1;
-      }
+.button-topup p {
+  margin: 0;
+  font-weight: 600;
+  color: #00bbff;
+  position: relative;
+  z-index: 1;
+}
 
-      .button-topup a {
-        text-decoration: none;
-        color: inherit;
-      }
+.button-topup a {
+  text-decoration: none;
+  color: inherit;
+}
 
-      .btp {
-        border: 0;
-        background-color: #ff000000;
-        margin: auto;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: aliceblue;
-      }
+.btp {
+  border: 0;
+  background-color: rgba(255, 255, 255, 0); /* Make background transparent */
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
 
-      .btp img {
-        height: 30px;
-        border-radius: 5px;
-        box-shadow: 1px 2px 2px 1px #000000;
-      }
+.btp img {
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 2px 1px #000000;
+}
+
 
       .btt2 {
         margin-top: 10px;
@@ -113,14 +127,15 @@ body {
       }
 
       .pu {
-        color: aliceblue;
-      }
+  color: aliceblue;
+  margin-bottom: 1px; /* Add margin-bottom for spacing */
+}
 
-      .pu span {
-        position: absolute;
-        left: 70%;
-        top: 33.5%;
-        font-weight: 600;
+.pu span {
+  position: absolute;
+  left: 70%;
+  top: 33.5%;
+  font-weight: 600;
       }
 
       .pu p {
@@ -138,7 +153,7 @@ body {
         padding: 5px;
         color: aliceblue;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        margin-top: 20px;
+        margin-top: 10px;
         overflow: hidden;
       }
 
@@ -195,20 +210,37 @@ body {
     font-weight: 400; /* Ganti font-weight sesuai keinginan (100-900) */
     font-size: 14px; /* Ganti ukuran font sesuai keinginan */
   }
+  .byXenzaPay {
+        font-size: 10px; /* Adjust the font size as needed */
+        color: #ffffff; /* Change the color if necessary */
+        margin: 0; /* Remove margin for a cleaner look */
+        font-weight: normal; /* Make it not bold */
+      }
+    @media (max-width: 768px) {
+    .navbar {
+      position: fixed;
+      width: 100%;
+    }
+    .button-topup {
+      margin-top: 75px; /* Adjust the margin-top to create space below the navbar */
+    }
+  }
     </style>
   </head>
   <body>
-   <nav class="navbar">
-        <div class="container-fluid">
+    <nav class="navbar">
+      <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            NewXENZA
+              <img src="https://xenzadigitalgroup.github.io/academy.my.id/xz_tower-removebg-preview.png" alt="|"> <!-- Add your logo image here -->
+              | Haii!! {{nama_user}}
+             
           </a>
-        </div>
+      </div>
       </nav>   
       <div class="button-topup row">
         <div class="pu">
-          <p>Haii!! {{nama_user}}</p>
-          <p id="saldo_user">XenzaPay Rp{{saldo_user}}</p>
+          <p class="byXenzaPay">Poin{{poin_member}}</p>
+          <p id="saldo_user">Rp{{saldo_user}}</p><p class="byXenzaPay"> byXenzaPay</p>
          <hr>
         </div>
         <div class="po">
@@ -252,7 +284,7 @@ body {
             <div class="btt2">
                 <button class="bt2"><a href="https://xenza.site/kategori/kategori-433901"><img src="https://play-lh.googleusercontent.com/-gl80k-nLhRwy_ovgo6o3ro2QX76sAJPpz7-azG-MXeLMaUSYtmZDT3GTM10wKqGMJSZ" alt=""></a><p>GoPay</p></button> 
                 <button class="bt2"><a href="https://xenza.site/kategori/kategori-433903"><img src="https://rakyatcirebon.disway.id/upload/71e3166747944ef2e8dacdcc696b5d1e.jpg" alt=""></a><p>Dana</p></button>
-                <button class="bt2"><a href="https://xenza.site/kategori/kategori-433904"><img src="https://25174313.fs1.hubspotusercontent-eu1.net/hub/25174313/hubfs/279562802_659176625392175_8530308473468348344_n.jpg?width=2048&height=2048&name=279562802_659176625392175_8530308473468348344_n.jpg" alt=""></a><p>SPay</p></button>
+                <button class="bt2"><a href="https://xenza.site/kategori/kategori-433904"><img src="https://25174313.fs1.hubspotusercontent-eu1.net/hub/25174313/hubfs/279562802_659176625392175_8530308473468348344_n.jpg?width=2048&height=2048&name=279562802_659176625392175_8530308473468348344_n.jpg" alt=""></a><p>ShopeePay</p></button>
                 <button class="bt2"><a href="https://xenza.site/kategori/kategori-390686"><img src="https://pbs.twimg.com/media/EUbePLEU0AIpder.jpg" alt=""></a><p>OVO</p></button>
                 <button class="bt2"><a href="-"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/LinkAja.svg/2048px-LinkAja.svg.png" alt=""></a><p>LinkAja</p></button>
               </div>
