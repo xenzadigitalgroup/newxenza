@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+body {
+        padding-top: 70px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        background-color: rgb(1, 174, 255);
+        border-radius: 0px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.229);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar-brand {
+        color: aliceblue;
+        font-weight: 800;
+      }
+
+      .button-topup {
+        margin-top: 100px;
+        height: 200px;
+        width: 100%;
+        position: relative;
+        margin: auto;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 3px 2px 5px 1px #00000049;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+      }
+
+      .button-topup::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://cdn.pixabay.com/photo/2020/05/15/05/11/landscape-5172224_960_720.png') center/cover;
+        filter: blur(3px);
+        border-radius: 0 0 8px 8px;
+        z-index: -1;
+      }
+
+      .button-topup p {
+        margin: 0;
+        font-weight: 600;
+        color: aliceblue;
+        position: relative;
+        z-index: 1;
+      }
+
+      .button-topup a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .btp {
+        border: 0;
+        background-color: #ff000000;
+        margin: auto;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: aliceblue;
+      }
+
+      .btp img {
+        height: 30px;
+        border-radius: 5px;
+        box-shadow: 1px 2px 2px 1px #000000;
+      }
+
+      .btt2 {
+        margin-top: 10px;
+        margin-left: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .bt2 {
+        flex: 0 0 calc(25% - 10px);
+        border: 0;
+        border-radius: 5px;
+        background: none;
+        color: #000000;
+        font-weight: 500;
+        margin: 0 10px 10px 0;
+      }
+
+      .bt2 img {
+        height: 50px;
+        background: none;
+        border-radius: 15px;
+        padding: 8px;
+      }
+
+      .po {
+        position: relative;
+        bottom: 10px;
+        display: flex;
+      }
+
+      .pu {
+        color: aliceblue;
+      }
+
+      .pu span {
+        position: absolute;
+        left: 70%;
+        top: 33.5%;
+        font-weight: 600;
+      }
+
+      .pu p {
+        margin-top: 10px;
+        font-weight: 700;
+      }
+
+      .informasi {
+        height: 28px;
+        width: 90%;
+        background-color: rgb(1, 174, 255);
+        margin: auto;
+        border-radius: 8px;
+        box-shadow: 3px 2px 5px 1px #00000049;
+        padding: 5px;
+        color: aliceblue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-top: 20px;
+        overflow: hidden;
+      }
+
+      .marquee {
+        display: inline-block;
+        white-space: nowrap;
+        animation: marquee 10s linear infinite;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+  .finansial-container {
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 20px;
+    font-size: 20px;
+    color: #42A5F5;
+  }
+
+  .bt2s {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+  }
+
+  .bt2 {
+    flex: 0 0 calc(25% - 10px);
+    border: 0;
+    border-radius: 5px;
+    background: none;
+    margin: 0 10px 10px 0;
+  }
+
+  .bt2 a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 100; /* Ganti font-weight sesuai keinginan (100-900) */
+  }
+
+  .bt2 img {
+    height: 50px;
+    background: none;
+    border-radius: 15px;
+    padding: 8px;
+  }
+  .bt2 p {
+    margin: 0;
+    font-weight: 400; /* Ganti font-weight sesuai keinginan (100-900) */
+    font-size: 14px; /* Ganti ukuran font sesuai keinginan */
+  }
+    </style>
+  </head>
+  <body>
+   <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            NewXENZA
+          </a>
+        </div>
+      </nav>   
+      <div class="button-topup row">
+        <div class="pu">
+          <p>Haii!! {{nama_user}}</p>
+          <p id="saldo_user">XenzaPay Rp{{saldo_user}}</p>
+         <hr>
+        </div>
+        <div class="po">
+<button class="btp"><a href="https://xenza.site/akun/?page=topup"><img src="https://img.freepik.com/premium-photo/premium-online-shopping-credit-card-wallet-icon-3d-rendering-isolated-background_150525-3299.jpg" alt=""></a><p>TopUp</p></button>
+<button class="btp"><a href="https://xenza.site/kategori/kategori-535541"><img src="https://img.freepik.com/free-vector/bill-receipt-credit-card-3d-illustration-cartoon-drawing-paper-sheet-with-dollar-symbol-credit-card-3d-style-white-background-business-payment-finances-transaction-concept_778687-705.jpg?size=338&ext=jpg&ga=GA1.1.632798143.1705968000&semt=ais" alt=""></a><p>Transfer</p></button>           
+           <button class="btp"><a href="https://xenza.site/akun/?page=transaksi"><img src="https://media.istockphoto.com/id/1469708998/id/foto/ikon-ilustrasi-3d-transaksi-uang.jpg?s=612x612&w=0&k=20&c=KqLHyNErKJGgTU2QRKkwvmRRJBLsPo8qiOzZJ46Iqtw=" alt=""></a><p>Transaksi</p></button>
+           <button class="btp"><a href="https://xenza.site/digital/263306"><img src="https://www.shutterstock.com/image-vector/cv-resume-job-search-human-600nw-2271041231.jpg" alt=""></a><p>Mutasi</p></button>
+        </div>
+      </div>
+<!-- kotak informasi persegi panjang -->
+<div class="informasi">
+  <!doctype html>
+  <p class="marquee">Maintenance rutin setiap hari pada jam 23.00-02.00 WIB</p>
+</div>
+<!-- Bagian finansial -->
+<div>
+  <label style="margin-top: 10px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-left: 20px; font-size: 20px; color: #42A5F5;">Finansial</label>
+  <div class="btt2">
+    <button class="bt2"><a href="https://xenzadigitalgroup.github.io/404/"><img src="https://www.idx.co.id/media/tkuihcav/reksa-dana-2.png" alt=""></a><p>Reksadana</p></button>
+    <button class="bt2"><a href="https://xenzadigitalgroup.github.io/404/"><img src="https://png.pngtree.com/png-clipart/20230920/original/pngtree-company-stocks-rgb-color-icon-illustration-cash-achievement-vector-png-image_12630151.png" alt=""></a><p>Saham</p></button>
+    <button class="bt2"><a href="https://xenzadigitalgroup.github.io/404/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXeesZaeCj-bFxEZut1Qt-7vsGf0A01G2erWePTtbQta3-Tm_vCddqu5WpQG_M9fHt8zY&usqp=CAU" alt=""></a><p>Obligasi</p></button>
+    <button class="bt2"><a href="https://xenzadigitalgroup.github.io/404/"><img src="https://e7.pngegg.com/pngimages/901/161/png-clipart-money-banknote-deposit-account-drawing-bank-logo-bank-thumbnail.png" alt=""></a><p>Deposito</p></button>
+    <button class="bt2"><a href="https://xenzadigitalgroup.github.io/my.id/form%20daftar.html"><img src="https://cdn-icons-png.flaticon.com/512/4614/4614153.png" alt=""></a><p> Ajukan Credit</p></button>
+  </div>
+</div>
+      <!-- button pulsa -->
+      <div>
+        <label style="margin-top: 10px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-left: 20px; font-size: 20px; color: #42A5F5;">Top Up Game</label>
+        <div class="btt2">
+            <button class="bt2"><a href="https://xenza.site/kategori/kategori-385247"><img src="https://play-lh.googleusercontent.com/LDIQqtHoEJSolLWKohRfUMxWdzPY0Ojw6nVU6hb9HjpUFhxQlTe2KaLVFO5I3HKPd4Q" alt=""></a><p>MLBB</p></button> 
+            <button class="bt2"><a href="https://xenza.site/kategori/kategori-430195"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgW6TbZ4yVZPv7F_jyxO3KfQfQGwhxEui5JRpUekEVAFiZ0uqRqsv6ekCQpDqZYkjlI5VT9hPRqXMPJevqlrgPpDV4R1iWLxcVXnwRWt9L4-MHvH0ehE68asOdZDp7gYRmEJ8TBsNpxyi-g-po9O4T5mAfeayj_J0aB4WD0fk_8ZVcsXwWrudGC3Vq/w320-h320/Free%20Fire%20Logo%20Jpg.jpg" alt=""></a><p>FF-A</p></button> 
+            <button class="bt2"><a href="https://xenza.site/kategori/kategori-385474"><img src="https://pbs.twimg.com/media/E-KJBCBXoAE0kAR.jpg" alt=""></a><p>GI-A</p></button>
+            <button class="bt2"><a href="https://xenza.site/kategori/kategori-437060"><img src="https://play-lh.googleusercontent.com/3ohs9NzwVBY1Gvzo9xxayHenfpOkLWZ78DAfTu1YZNq1t1QCszDjy6OxjaUW-VRIUoE" alt=""></a><p>PUBGM</p></button>
+            <button class="bt2"><a href="aaaa"><img src="https://play-lh.googleusercontent.com/5QCVJCqv0iJ-ZJZSF9Uox7JBN_EY71RXYuBf4ZZ9fc0wDzlgnaVQ8wc10-kbkqgZJyhB=w240-h480-rw" alt=""></a><p>CODM</p></button>
+            <button class="bt2"><a href="aaaa"><img src="https://play-lh.googleusercontent.com/MoxEDxm0nCOXSiwCqQ2qK64z6Bb8_l3OXCQU4XYKG5GghvQc7W2MmofxnKJ0HrdEnw" alt=""></a><p>HI-3</p></button>
+            <button class="bt2"><a href="aaaa"><img src="https://play-lh.googleusercontent.com/AsaeL9oWkGdjyDNwbmzsaYY_WxdPrmQVGUfgfzL4mhJteC1X3HdLib9bafnXaYr3WB8=w240-h480-rw" alt=""></a><p>HSR</p></button>
+        </div>
+        <div>
+<div>
+            <label style="margin-top: 10px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-left: 20px; font-size: 20px; color: #42A5F5;">E-Wallet</label>
+            <div class="btt2">
+                <button class="bt2"><a href="https://xenza.site/kategori/kategori-433901"><img src="https://play-lh.googleusercontent.com/-gl80k-nLhRwy_ovgo6o3ro2QX76sAJPpz7-azG-MXeLMaUSYtmZDT3GTM10wKqGMJSZ" alt=""></a><p>GoPay</p></button> 
+                <button class="bt2"><a href="https://xenza.site/kategori/kategori-433903"><img src="https://rakyatcirebon.disway.id/upload/71e3166747944ef2e8dacdcc696b5d1e.jpg" alt=""></a><p>Dana</p></button>
+                <button class="bt2"><a href="https://xenza.site/kategori/kategori-433904"><img src="https://25174313.fs1.hubspotusercontent-eu1.net/hub/25174313/hubfs/279562802_659176625392175_8530308473468348344_n.jpg?width=2048&height=2048&name=279562802_659176625392175_8530308473468348344_n.jpg" alt=""></a><p>ShopeePay</p></button>
+                <button class="bt2"><a href="https://xenza.site/kategori/kategori-390686"><img src="https://pbs.twimg.com/media/EUbePLEU0AIpder.jpg" alt=""></a><p>OVO</p></button>
+                <button class="bt2"><a href="-"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/LinkAja.svg/2048px-LinkAja.svg.png" alt=""></a><p>LinkAja</p></button>
+              </div>
+        <div>
+                <label style="margin-top: 10px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-left: 20px; font-size: 20px; color: #42A5F5;">Pulsa</label>
+                <div class="btt2">
+                    <button class="bt2"><a href="https://xenza.site/kategori/kategori-433913"><img src="https://play-lh.googleusercontent.com/DBzJQ2z8p3n_YPQkmbc6luCfO3OhafRkOZimMoXFXBMoUokLu6RPDRgVM86U_QkRVNE=w600-h300-pc0xffffff-pd" alt=""></a><p>Telkomsel</p></button> 
+                    <button class="bt2"><a href="https://xenza.site/kategori/kategori-437050"><img src="https://upload.wikimedia.org/wikipedia/id/thumb/5/55/XL_logo_2016.svg/1200px-XL_logo_2016.svg.png" alt=""></a><p>XL</p></button>
+                  </div>
+        </div>
+      
+      <label style="margin-top: 10px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-left: 20px; font-size: 20px; color: #42A5F5;">Berita</label>
+      <div style="padding: 10px; overflow-x: auto;">
+        <div class="card-container" style="white-space: nowrap;">
+            <div class="card mb-3" style="display: inline-block; min-width: 200px; width: 50px;">
+                <img style="height: 100px;" src="https://yaviet.com/wp-content/uploads/2018/08/loi-404-not-found-300x225.jpg" class="card-img-top" alt="...">
+                <div class="card-body" style="font-size: 12px;">
+                    <h5 class="card-title">Belum ada berita</h5>
+                    <p class="card-text">-</p>
+                </div>
+            </div>
+            <div class="card mb-3" style="display: inline-block; min-width: 200px; width: 50px;">
+                <img style="height: 100px;" src="https://yaviet.com/wp-content/uploads/2018/08/loi-404-not-found-300x225.jpg" class="card-img-top" alt="...">
+                <div class="card-body" style="font-size: 12px;">
+                    <h5 class="card-title">Belum ada berita</h5>
+                    <p class="card-text">-</p>
+                </div>
+            </div>
+            <div class="card mb-3" style="display: inline-block; min-width: 200px; width: 50px;">
+              <img style="height: 100px;" src="https://yaviet.com/wp-content/uploads/2018/08/loi-404-not-found-300x225.jpg" class="card-img-top" alt="...">
+              <div class="card-body" style="font-size: 12px;">
+                  <h5 class="card-title">Belum ada berita</h5>
+                  <p class="card-text">-</p>
+              </div>
+          </div>
+          <div class="card mb-3" style="display: inline-block; min-width: 200px; width: 50px;">
+            <img style="height: 100px;" src="https://yaviet.com/wp-content/uploads/2018/08/loi-404-not-found-300x225.jpg" class="card-img-top" alt="...">
+            <div class="card-body" style="font-size: 12px;">
+                <h5 class="card-title">Belum ada berita</h5>
+                <p class="card-text">-</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+<script>
+      // Fungsi untuk format angka dengan tanda pemisah "."
+      function formatNumber(number) {
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      }
+    
+      // Mendapatkan elemen dengan ID saldo_user
+      var saldoUserElement = document.getElementById("saldo_user");
+    
+      // Memeriksa apakah elemen saldo_user ditemukan
+      if (saldoUserElement) {
+        // Mengambil nilai saldo dari elemen
+        var saldo = saldoUserElement.textContent;
+    
+        // Format angka dengan tanda pemisah "."
+        var saldoFormatted = formatNumber(saldo);
+    
+        // Memasukkan saldo yang sudah diformat kembali ke elemen
+        saldoUserElement.textContent = saldoFormatted;
+      }
+    </script>
+        
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <div class="copyright">
+      &copy; 2024 xenzadigitalgroup.
+    </div>
+  </body>
+</html>
