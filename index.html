@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
 body {
     padding-top: 80px; /* Adjust the padding to create space for the fixed navbar */
@@ -24,10 +24,10 @@ body {
 
 
 .container__blue__color {
-            background-color: #00ccff;
+            background-color: rgb(1, 174, 255);
             padding: 10px 20px 0;
             border-radius: 0px 0px 50px 50px;
-            height: 100px;
+            height: 130px;
           }
           .namanya {
   position: relative;
@@ -229,7 +229,7 @@ body {
       .marquee {
         display: inline-block;
         white-space: nowrap;
-        animation: marquee 10s linear infinite;
+        animation: marquee 12s linear infinite;
       }
 
       @keyframes marquee {
@@ -295,12 +295,50 @@ body {
       margin-top: 75px; /* Adjust the margin-top to create space below the navbar */
     }
   }
-  
+/* Warna hijau untuk persentase yang positif */
+.finansial-container span.green {
+    color: green;
+}
+
+/* Warna merah untuk persentase yang negatif */
+.finansial-container span.red {
+    color: red;
+}
+
+/* Warna hijau untuk nominal positif */
+.finansial-container span.green-amount {
+    color: green;
+}
+
+/* Warna hijau untuk persentase yang positif di dalam marquee */
+.marquee span.green {
+    color: green;
+}
+
+/* Warna merah untuk persentase yang negatif di dalam marquee */
+.marquee span.red {
+    color: red;
+}
+.logo-container {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1001; /* Higher z-index than the navbar */
+    }
+
+    .logo-container img {
+      height: 70px; /* Adjust the height as needed */
+    }
     </style>
   </head>
   <body>
-    <section class="container__blue__color">
-        <h1 class="namanya">NewXenza | Haii {{nama_user}}</span></h1>
+    <div class="logo-container">
+      <a href="your_logo_link_url">
+        <img src="https://xenzadigitalgroup.github.io/academy.my.id/xz_tower-removebg-preview.png" alt="Logo">
+      </a>
+    </div>
+    <section class="container__blue__color"> 
+        <h1 class="namanya">Haii {{nama_user}}</span></h1>
         <p class="namanya"id="saldo_user">Rp{{saldo_user}}</span></p>
         <div class="wrap__menu">
             <div class="main__menu">
@@ -345,7 +383,7 @@ body {
 <!-- kotak informasi persegi panjang -->
 <div class="informasi">
   <!doctype html>
-  <p class="marquee">Maintenance rutin setiap hari pada jam 23.00-02.00 WIB</p>
+  <p class="marquee">Maintenance rutin setiap hari pada jam 23.00-02.00 WIB | Jangan lakukan transaksi.</p>
 </div>
 <!-- Bagian finansial -->
 <div>
@@ -356,6 +394,9 @@ body {
     <button class="bt2"><a href="https://xenzadigitalgroup.github.io/404/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXeesZaeCj-bFxEZut1Qt-7vsGf0A01G2erWePTtbQta3-Tm_vCddqu5WpQG_M9fHt8zY&usqp=CAU" alt=""></a><p>Obligasi</p></button>
     <button class="bt2"><a href="https://xenzadigitalgroup.github.io/404/"><img src="https://e7.pngegg.com/pngimages/901/161/png-clipart-money-banknote-deposit-account-drawing-bank-logo-bank-thumbnail.png" alt=""></a><p>Deposito</p></button>
     <button class="bt2"><a href="https://xenzadigitalgroup.github.io/my.id/form%20daftar.html"><img src="https://cdn-icons-png.flaticon.com/512/4614/4614153.png" alt=""></a><p> Ajukan Credit</p></button>
+    <div class="informasi">
+      <p class="marquee">XDG-SAHAM🔺<span class="green">+11,7%</span> | XDG-OBG🔻<span class="red">-7.89%</span> | XDG-MMRKT🔺<span class="green">+9,3%</span> | XBNK🔺<span class="green">+Rp476.8Jt</span> | Int🔺<span class="green">+3,5%</span></p>
+  </div>
   </div>
 </div>
       <!-- button pulsa -->
